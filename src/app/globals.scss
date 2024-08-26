@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+:root{
+    --white: #fff;
+    --black: #000;
+    --black-500: #292827;
+
+    --gray-100: #8a8a8a;
+
+    --orange-100: #FFFAF2;
+    --orange-300: #FF8800;
+    --orange-500: #C66300;
+}
+
+button{
+    cursor: pointer;
+}
+
+body{
+    background: var(--orange-100);
+    color: var(--black-500);
+}
+
+a{
+    text-decoration: none;
+    color: inherit
+}
+
+body, input, textarea, select, button{
+    font: 400, 1rem, sans-serif;
+}
+
+@media(max-width: 1080px){
+    html{
+        font-size: 93.75%;
+    }
+}
+
+@media(max-width: 720px){
+    html{
+        font-size: 87.5%;
+    }
+}

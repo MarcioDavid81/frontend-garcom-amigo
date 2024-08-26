@@ -1,0 +1,40 @@
+.categoryContainer{
+    max-width: 720px;
+    margin: 20px auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    h1{
+        color: var(--black-500);
+    }
+}
+
+.categoryForm{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+.categoryInput{
+    height: 40px;
+    border: 1px solid var(--orange-500);
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 0 1rem;
+
+    &::placeholder{
+        color: #c6630060;
+      }
+
+    &:focus{
+        border: 1px solid var(--black-500);
+    }
+
+    &:focus::placeholder{
+        color: #00000037;
+      }
+}
+
+  
