@@ -1,8 +1,12 @@
+import { OrderProps } from '@/lib/order.type';
 import styles from './styles.module.scss';
 import { RefreshCcw } from 'lucide-react';
 
+interface Props {
+    orders: OrderProps[];
+}
 
-export default function Orders() {
+export default function Orders({ orders }: Props) {
 
   return (
         <main className={styles.orderContainer}>
@@ -14,24 +18,15 @@ export default function Orders() {
             </section>
 
             <section className={styles.orderList}>
-                <button
-                    className={styles.orderItem}
-                >
-                    <div className={styles.orderTag}></div>
-                    <span>Mesa 10</span>
-                </button>
-                <button
-                    className={styles.orderItem}
-                >
-                    <div className={styles.orderTag}></div>
-                    <span>Mesa 11</span>
-                </button>
-                <button
-                    className={styles.orderItem}
-                >
-                    <div className={styles.orderTag}></div>
-                    <span>Mesa 12</span>
-                </button>           
+                {orders.map( order => (
+                    <button
+                        key={order.id}
+                        className={styles.orderItem}
+                    >
+                        <div className={styles.orderTag}></div>
+                        <span>Mesa {order.table}</span>
+                    </button>
+                ))}          
             </section>   
                     
         </main>
