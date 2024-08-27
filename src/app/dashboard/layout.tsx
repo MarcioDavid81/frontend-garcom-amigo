@@ -1,10 +1,14 @@
 import Header from "./components/header"
+import { OrderProvider } from "@/providers/order"
 
-export default function DashboarLayout({ children }: { children: React.ReactNode }) {
+export default function DashboarLayout({ children }:
+    { children: React.ReactNode }) {
     return (
         <>
-            <Header />      
-            {children}  
+            <Header />   
+            <OrderProvider>
+                {children}
+            </OrderProvider>  
         </>
     )
 
