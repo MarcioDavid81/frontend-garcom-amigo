@@ -1,6 +1,7 @@
 import { OrderProps } from '@/lib/order.type';
 import styles from './styles.module.scss';
 import { RefreshCcw } from 'lucide-react';
+import { ModalOrder } from '@/app/dashboard/components/modal';
 
 interface Props {
     orders: OrderProps[];
@@ -9,6 +10,7 @@ interface Props {
 export default function Orders({ orders }: Props) {
 
   return (
+    <>
         <main className={styles.orderContainer}>
             <section className={styles.orderContent}>
                 <h1>Últimos Pedidos</h1>
@@ -30,5 +32,8 @@ export default function Orders({ orders }: Props) {
             </section>   
                     
         </main>
+
+        <ModalOrder />
+    </>
   )
 }
