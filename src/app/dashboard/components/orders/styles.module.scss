@@ -30,6 +30,17 @@
     gap: 1rem;
 }
 
+.emptyItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--orange-300);
+    border-radius: 8px;
+    color: var(--black-500);
+}
+
 .orderItem{
     display: flex;
     background-color: var(--orange-300);

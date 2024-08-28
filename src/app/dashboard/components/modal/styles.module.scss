@@ -84,3 +84,11 @@
         transform: scale(1.02);
     }
 }
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
