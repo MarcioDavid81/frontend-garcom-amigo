@@ -3,6 +3,7 @@ import { Button } from '@/app/dashboard/components/button'
 import { getCookieServer } from '@/lib/cookieServer';
 import { api } from '@/services/api';
 import { redirect } from 'next/navigation';
+import { toast } from 'sonner';
 
 export default function Category() {
 
@@ -32,6 +33,7 @@ export default function Category() {
             return;
         })
 
+        toast.success("Categoria cadastrada com sucesso!")
         redirect('/dashboard')
 
     }
